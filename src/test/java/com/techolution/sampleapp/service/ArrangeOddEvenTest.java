@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Created by Lenovo on 27-07-2017.
+ * @author Prasenjit Karmakar
  */
 public class ArrangeOddEvenTest {
     private ArrangeOddEven arrangeOddEven;

@@ -2,12 +2,12 @@ package com.techolution.sampleapp.controller;
 
 import com.techolution.sampleapp.service.NumberArrangementService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by Lenovo on 27-07-2017.
+ *  @author Prasenjit Karmakar
  */
 
 @RestController
@@ -19,8 +19,8 @@ public class NumberArrangementController {
         this.numberArrangementService = numberArrangementService;
     }
 
-    @GetMapping("/{stringArray}")
-    public String arrangeNumbers(@PathVariable String stringArray) {
-        return numberArrangementService.arrangeNumbers(stringArray);
+    @GetMapping
+    public String arrangeNumbers(@RequestParam String input) {
+        return numberArrangementService.arrangeNumbers(input);
     }
 }

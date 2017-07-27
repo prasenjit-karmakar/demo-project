@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by Lenovo on 27-07-2017.
+ * @author Prasenjit Karmakar
  */
 @SpringBootApplication
 public class SampleApplication {

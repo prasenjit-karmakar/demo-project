@@ -1,11 +1,12 @@
 package com.techolution.sampleapp.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.Arrays;
 
 /**
- * Created by Lenovo on 27-07-2017.
+ * @author Prasenjit Karmakar
  */
 @Service
 public class NumberArrangementService {
@@ -16,7 +17,10 @@ public class NumberArrangementService {
     }
 
     public String arrangeNumbers(String numbers) {
-        int[] integers = Arrays.stream(numbers.split(",")).mapToInt(Integer::parseInt).toArray();
-        return Arrays.toString(arrangeOddEven.arrangeOddEven(integers));
+        if (!StringUtils.isEmpty(numbers)) {
+            int[] integers = Arrays.stream(numbers.split(",")).mapToInt(Integer::parseInt).toArray();
+            return Arrays.toString(arrangeOddEven.arrangeOddEven(integers));
+        } else
+            throw new RuntimeException("Input array cannot be empty");
     }
 }
